@@ -127,3 +127,29 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# React files
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+_core/templates/react-template/node_modules
+_core/templates/react-template/.pnp
+_core/templates/react-template.pnp.js
+
+# testing
+_core/templates/react-template/coverage
+
+# production
+_core/templates/react-template/build
+
+# misc
+_core/templates/react-template.DS_Store
+_core/templates/react-template.env.local
+_core/templates/react-template.env.development.local
+_core/templates/react-template.env.test.local
+_core/templates/react-template.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
