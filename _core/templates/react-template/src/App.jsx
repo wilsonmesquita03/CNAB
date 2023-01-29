@@ -9,11 +9,13 @@ const App = () => {
 
     const handleSubmit = (e) => {
         const file = e.target.files[0]
-        api.post("cnab/", file, {
+        const res = api.post("cnab/", file, {
             headers: {
                 "Content-Type": "*/*"
             }
         })
+
+        console.log(res)
     }
 
     useEffect(() => {
