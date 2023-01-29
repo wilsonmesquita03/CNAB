@@ -7,7 +7,7 @@ class StoreSerializer(serializers.ModelSerializer):
     balance = serializers.SerializerMethodField()
     operations = CnabSerializer(many=True)
 
-    def get_balance(self, obj):
+    def get_balance(self, obj) -> float:
         balance = 0
 
         for operation in obj.operations.all():
