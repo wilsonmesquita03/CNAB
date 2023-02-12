@@ -8,3 +8,8 @@ from .models import Store
 class StoreView(generics.ListAPIView):
     serializer_class = StoreSerializer
     queryset = Store.objects.all()
+
+class StoreDetailedView(generics.RetrieveAPIView):
+    serializer_class = StoreSerializer
+    queryset = Store.objects.all()
+    lookup_url_kwarg = "pk"

@@ -11,7 +11,7 @@ class StoreSerializer(serializers.ModelSerializer):
         balance = 0
 
         for operation in obj.operations.all():
-            if operation.type == "entrance":
+            if operation.nature == "entrance":
                 balance += operation.value
             else:
                 balance -= operation.value

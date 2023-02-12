@@ -13,10 +13,8 @@ from rest_framework.renderers import TemplateHTMLRenderer
 # Create your views here.
 class CreateCnabView(ListAPIView, APIView):
     parser_classes = [FileUploadParser]
-    renderer_classes = [TemplateHTMLRenderer]
     queryset = Cnab.objects.all()
     serializer_class = CnabSerializer
-    template_name = "create_cnab.html"
     
     def post(self, request, filename="cnab", format=None):
         uploaded_file = request.FILES['file']
